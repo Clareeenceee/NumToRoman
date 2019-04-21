@@ -1,0 +1,75 @@
+
+package pkgtry;
+
+public class Try {
+    public static void main(String[] args) {
+        tryLang convrt = new tryLang();
+        convrt.convert(12312);
+    }
+}
+class tryLang {
+    
+public static String convert(int input_here) {
+    String the_output = "";
+    do {
+        the_output += "M";
+        input_here -= 1000;        
+    }while (input_here >= 1000);
+    
+    do{
+        the_output += "CM";
+        input_here -= 900;
+    }while (input_here >= 900);
+    
+    do{
+        the_output += "D";
+        input_here -= 500;
+    }while (input_here >= 500);
+    
+    do{
+        the_output += "CD";
+        input_here -= 400;
+    }while (input_here >= 400);
+    
+    do{
+        the_output += "C";
+        input_here -= 100;
+    }while (input_here >= 100);
+    
+    do{
+        the_output += "XC";
+        input_here -= 90;
+    }while (input_here >= 90);
+    
+    do{
+        the_output += "L";
+        input_here -= 50;
+    }while (input_here >= 50);
+    do{
+        the_output += "XL";
+        input_here -= 40;
+    }while (input_here >= 40);
+    do{
+        the_output += "X";
+        input_here -= 10;
+    }while (input_here >= 10);
+    do{
+        the_output+= "IX";
+        input_here -= 9;
+    }while (input_here >= 9);
+    do{
+        the_output += "V";
+        input_here -= 5;
+    }while (input_here >= 5);
+    do{
+        the_output += "IV";
+        input_here -= 4;
+    }while (input_here >= 4);
+    do{
+        the_output += "I";
+        input_here -= 1;
+    }while (input_here >= 1);
+    System.out.println(the_output);
+    return the_output;
+    }
+}
